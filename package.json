@@ -1,5 +1,5 @@
 {
-  "name": "class-03-rest",
+  "name": "basic-api-server",
   "version": "1.0.0",
   "description": "Demo REST API with full CRUD",
   "main": "index.js",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JacobKnaack/class-03-rest.git"
+    "url": "git+https://github.com/taegorov/basic-api-server.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JacobKnaack/class-03-rest/issues"
+    "url": "https://github.com/taegorov/basic-api-server/issues"
   },
-  "homepage": "https://github.com/JacobKnaack/class-03-rest#readme",
+  "homepage": "https://github.com/taegorov/basic-api-server#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",

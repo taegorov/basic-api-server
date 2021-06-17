@@ -2,7 +2,7 @@
 
 const express = require('express');
 
-const data = require('..models/index.js');
+const data = require('../models/index.js');
 const router = express.Router();
 
 
