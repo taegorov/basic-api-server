@@ -11,7 +11,7 @@ Build a REST API using Express, by creating a proper series of endpoints that pe
 ### /car
 
 * No parameters
-* JSON response: {"name":"value"}
+* JSON response: {"name":"value", "year":integer}
 
 --- 
 

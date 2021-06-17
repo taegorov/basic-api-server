@@ -16,6 +16,7 @@ afterAll(async () => {
 });
 
 
+// === === tests below === === //
 
 describe('testing the server', () => {
 
@@ -33,6 +34,15 @@ describe('testing the server', () => {
   });
 
 
+  // === === tests GET '/car' === === //
+  test('testing a 200 for GET `/car`', async () => {
+    const response = await request.get('/car');
+
+    expect(response.status).toEqual(200);
+    expect(response.body).toEqual([]);
+  });
+
+
   // === === tests POST === === //
   test('testing a 200 for POST `/car`', async () => {
     const response = await request.post('/car').send({
@@ -41,15 +51,6 @@ describe('testing the server', () => {
     });
     expect(response.status).toEqual(200);
     expect(response.body.name).toEqual('test');
-  });
-
-
-  // === === tests GET '/car' === === //
-  test('testing a 200 for GET `/car`', async () => {
-    const response = await request.get('/car');
-
-    expect(response.status).toEqual(200);
-    expect(response.body).toEqual(['test', 1991]);
   });
 
 
