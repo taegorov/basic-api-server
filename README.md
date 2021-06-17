@@ -13,6 +13,10 @@ Build a REST API using Express, by creating a proper series of endpoints that pe
 * No parameters
 * JSON response: {"name":"value", "year":integer}
 
+### /food
+* No parameters
+* JSON response: {"name":"value", "pounds":integer}
+
 --- 
 
 ## URLs
