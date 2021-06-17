@@ -6,6 +6,7 @@ const DATABASE_URL = process.env.DATABASE_URL || 'sqlite:memory:';
 
 const { Sequelize, DataTypes } = require('sequelize');
 const carModel = require('./car.js');
+const foodModel = require('./food.js');
 
 
 // // tests might not pass with this commented out. Either have this uncommented out, or new Sequelize(DATABASE_URL) below
@@ -23,8 +24,10 @@ let sequelize = new Sequelize(DATABASE_URL, {
 });
 
 const car = carModel(sequelize, DataTypes);
+const food = foodModel(sequelize, DataTypes);
 
 module.exports = {
   db: sequelize,
   car: car,
+  food: food,
 }

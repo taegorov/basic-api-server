@@ -42,8 +42,17 @@ describe('testing the server', () => {
     expect(response.body).toEqual([]);
   });
 
+  // === === tests GET '/food' === === //
+  test('testing a 200 for GET `/food`', async () => {
+    const response = await request.get('/food');
 
-  // === === tests POST === === //
+    expect(response.status).toEqual(200);
+    expect(response.body).toEqual([]);
+  });
+
+
+
+  // === === tests POST for car === === //
   test('testing a 200 for POST `/car`', async () => {
     const response = await request.post('/car').send({
       name: 'test',
@@ -52,6 +61,17 @@ describe('testing the server', () => {
     expect(response.status).toEqual(200);
     expect(response.body.name).toEqual('test');
   });
+
+  // === === tests POST for food=== === //
+  test('testing a 200 for POST `/food`', async () => {
+    const response = await request.post('/food').send({
+      name: 'foodtest',
+      poundsWorth: 3000000,
+    });
+    expect(response.status).toEqual(200);
+    expect(response.body.name).toEqual('foodtest');
+  });
+
 
 
   // === === tests GET '/car/:carId === === //
@@ -62,8 +82,17 @@ describe('testing the server', () => {
     expect(response.body.name).toEqual('test')
   });
 
+  // === === tests GET '/food/:foodId === === //
+  test('testing a 200 for GET `/food/:foodId`', async () => {
+    const response = await request.get(`/food/1`);
 
-  // === === tests PUT === === //
+    expect(response.status).toEqual(200);
+    expect(response.body.name).toEqual('foodtest')
+  });
+
+
+
+  // === === tests PUT for car === === //
   test('testing a 200 for PUT `/car/:carId`', async () => {
     const response = await request.put(`/car/1`).send({
       name: 'testing again',
@@ -72,10 +101,27 @@ describe('testing the server', () => {
     expect(response.body.name).toEqual('testing again');
   });
 
+  // === === tests PUT for food === === //
+  test('testing a 200 for PUT `/food/:foodId`', async () => {
+    const response = await request.put(`/food/1`).send({
+      name: 'testing again',
+    });
+    expect(response.status).toEqual(200);
+    expect(response.body.name).toEqual('testing again');
+  });
 
-  // === === DESTROYS a record === === //
+
+
+  // === === DESTROYS a record for car === === //
   test('testing a 200 for DELETE `/car/:carId`', async () => {
     const response = await request.delete(`/car/1`);
+
+    expect(response.status).toEqual(204);
+  });
+
+  // === === DESTROYS a record for food === === //
+  test('testing a 200 for DELETE `/food/:foodId`', async () => {
+    const response = await request.delete(`/food/1`);
 
     expect(response.status).toEqual(204);
   });
