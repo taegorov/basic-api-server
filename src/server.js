@@ -14,6 +14,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/');
 app.use(authRoutes);
 app.use(carRoutes);
 app.use(foodRoutes);

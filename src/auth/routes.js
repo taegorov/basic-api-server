@@ -10,6 +10,7 @@ const permissions = require('./middleware/acl.js')
 
 console.log('✔ file loaded');
 
+
 authRouter.post('/signup', async (req, res, next) => {
   console.log('got here');
   try {
