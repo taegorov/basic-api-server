@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/taegorov/basic-api-server#readme",
   "dependencies": {
+    "base-64": "^1.0.0",
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
