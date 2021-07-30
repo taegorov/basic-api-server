@@ -15,6 +15,8 @@ const userSchema = require('./user.schema.js');
 // // tests might not pass with this commented out. Either have this uncommented out, or new Sequelize(DATABASE_URL) below
 // let sequelize = new Sequelize(DATABASE_URL);
 
+// let sequelize = new Sequelize(process.env.DATABASE_URL || 'sqlite:memory:');
+
 
 // Heroku needs this to run Sequelize
 let sequelize = new Sequelize(DATABASE_URL, {
